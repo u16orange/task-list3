@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+    redirect_back(fallback_location: root_path)
   end
 
   def new
